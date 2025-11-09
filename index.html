@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Humanizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-container">
+        <h2>Login or Sign Up</h2>
+        <form id="auth-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <div class="auth-buttons">
+                <button type="button" id="login-btn">Login</button>
+                <button type="button" id="signup-btn">Sign Up</button>
+            </div>
+            <p id="auth-message"></p>
+        </form>
+    </div>
+
+    <div id="app-container" class="hidden">
+        <header>
+            <h2 id="welcome-message"></h2>
+            <button id="logout-btn">Logout</button>
+        </header>
+
+        <main>
+            <section id="humanizer-section">
+                <h3>🤖 AI Text Humanizer</h3>
+                <p>Paste your AI-generated text below to make it sound more human.</p>
+                <textarea id="text-input" placeholder="Paste your AI text here..."></textarea>
+                <button id="humanize-btn">Humanize ✨</button>
+                
+                <h4>Your Humanized Text:</h4>
+                <div id="text-output" class="output-box"></div>
+            </section>
+
+            <hr>
+
+            <section id="dashboard-section">
+                <h3>Your Text History</h3>
+                <div id="history-list">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
